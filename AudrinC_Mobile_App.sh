@@ -6,8 +6,6 @@
 # Then find all Xcode projects and builds to produce a working spreadsheet to track with:
 #	https://docs.google.com/spreadsheets/d/1AYnUEiHSNKH9FwxHrfE3zSzixrUTcaw1FZl7czlW-F0/edit?usp=sharing
 #
-# Hard coded paths are a no-no. tj
-#
 
 export CC=$HOME/Dropbox/Projects/Customers;
 	tag -a Purple $CC/_?/_*/_Projects/_202?/*-iOS/*.xcworkspace/{..,../../*-android} ;
@@ -38,10 +36,10 @@ export CC=$HOME/Dropbox/Projects/Customers;
 		rsync -aPz -e "ssh -oHostKeyAlgorithms=+ssh-dss" --min-size=1 $F 198.57.151.18:public_html/wpau/;
 
 #
-# Clean up find into file to manually copy into google spreadsheet. 
+# Clean up find into file to manually copy into google spreadsheet. - tj
 #
 
-for i in /Users/thomasthixton/Dropbox/Projects/Customers/_?/_*/_Projects/_202*/*-iOS/.git - tj
+for i in /Users/thomasthixton/Dropbox/Projects/Customers/_?/_*/_Projects/_202*/*-iOS/.git 
 do
 	(
 	cd $i/..
